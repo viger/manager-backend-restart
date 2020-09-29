@@ -2,12 +2,14 @@ name: IBM Cloud Auto Restart Manager Backend
 
 on:
   push:
-    branches: [ master ]
+    branches: master
+  watch:
+    types: started
   schedule:
-    - cron: '0 55 * * FRI'
+    - cron: 22 0 1/7 * *
 
 jobs:
-  ibm-cloud-restart:
+  IBM-Cloud-CF-APP-Restart:
     runs-on: ubuntu-latest
 
     steps:
