@@ -24,5 +24,5 @@ jobs:
       run: cf l -a https://api.${{ secrets.RGN }}.cf.cloud.ibm.com login -u ${{ secrets.MAIL }} -p ${{ secrets.PWD }}
       
     - name: Restart CF APP
-      run: cf rs ${{ secrets.CFNAME2 }}
+      run: cf rs ${{ secrets.CFNAME3 }}
 
